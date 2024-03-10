@@ -1,0 +1,26 @@
+<mat-toolbar color="primary" fxLayoutAlign="space-between center">
+    <a  mat-button routerLink="/link"><span><mat-icon>code</mat-icon>Harish Babu / Full Stack Developer</span></a>
+    <div fxLayoutGap="20px" fxHide.xs fxHide.lt-md>
+        <a mat-button> About Me</a>
+        <a mat-button> Tech Stack</a>
+        <a mat-button> Projects & Open-Source-Contributions</a>
+        <a mat-button>Coding Profiles</a>
+        <a mat-button>Certifications</a>
+        <a mat-button>Awards & Recognitions</a>
+        <a mat-raised-button color="accent"> Contact</a>
+    </div>
+<button mat-icon-button fxHide fxShow.xs fxFlex.xs="100" fxShow.lt-md fxFlex.lt-md="200" fxLayoutAlign.xs="end"
+    fxLayoutAlign.lt-md="end" [mat-menu-trigger-for]="menu">
+    <mat-icon>menu</mat-icon>
+</button>
+<mat-menu #menu="matMenu">
+    <a mat-menu-item> About Me</a>
+    <a mat-menu-item> Tech Stack</a>
+    <a mat-menu-item> Projects & Open-Source-Contributions</a>
+    <a mat-menu-item>Coding Profiles</a>
+    <a mat-menu-item>Certifications</a>
+    <a mat-menu-item>Awards & Recognitions</a>
+    <a mat-menu-item> Contact</a>
+</mat-menu>
+</mat-toolbar>
+<router-outlet></router-outlet>
