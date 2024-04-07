@@ -5,6 +5,7 @@ import { AboutMeComponent } from './about-me.component';
 import { HeaderComponent } from '../header-component/header.component';
 import { HeaderModule } from '../header-component/header.module';
 import { FooterModule } from '../footer-component/footer.module';
+import { MaterialModule } from '../material-module/material.module';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { FooterModule } from '../footer-component/footer.module';
     CommonModule,
     HeaderModule,
     FooterModule,
+    MaterialModule,
     AboutMeRoutingModule
   ]
 })

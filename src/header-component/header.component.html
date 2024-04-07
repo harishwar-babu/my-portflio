@@ -1,26 +1,35 @@
 <mat-toolbar color="primary" fxLayoutAlign="space-between center">
-    <a  mat-button routerLink="/link"><span><mat-icon>code</mat-icon>Harish Babu / Full Stack Developer</span></a>
-    <div fxLayoutGap="20px" fxHide.xs fxHide.lt-md>
-        <a mat-button> About Me</a>
-        <a mat-button> Tech Stack</a>
-        <a mat-button> Projects & Open-Source-Contributions</a>
-        <a mat-button>Coding Profiles</a>
-        <a mat-button>Certifications</a>
-        <a mat-button>Awards & Recognitions</a>
+    <a mat-button routerLink="/about-me">
+        <mat-icon class="fa-brands fa-dev">code</mat-icon>
+        <span class="align-center-space">
+            Harish Babu / Full Stack Developer
+        </span></a>
+    <div fxLayoutGap="20px">
+        <a mat-button>About Me</a>
+        <button mat-button [matMenuTriggerFor]="mycareer">
+            <div class="align-center">
+                <span>My-Career</span>
+                <mat-icon>arrow_drop_down</mat-icon>
+            </div>
+        </button>
+        <button mat-button [matMenuTriggerFor]="professionaldev">
+            <div class="align-center">
+                <span>Professional Development</span>
+                <mat-icon>arrow_drop_down</mat-icon>
+            </div>
+        </button>
         <a mat-raised-button color="accent"> Contact</a>
+        <mat-menu #professionaldev="matMenu">
+            <a mat-menu-item> Tech Stack</a>
+            <a mat-menu-item>Projects</a>
+            <a mat-menu-item>Open-Source-Contributions</a>
+            <a mat-menu-item>Coding Profiles</a>
+            <a mat-menu-item>Certifications</a>
+        </mat-menu>
+        <mat-menu #mycareer="matMenu">
+            <a mat-menu-item>Educational Qualifications</a>
+            <a mat-menu-item>Work History</a>
+            <a mat-menu-item>Awards and Recognitions</a>
+        </mat-menu>
     </div>
-<button mat-icon-button fxHide fxShow.xs fxFlex.xs="100" fxShow.lt-md fxFlex.lt-md="200" fxLayoutAlign.xs="end"
-    fxLayoutAlign.lt-md="end" [mat-menu-trigger-for]="menu">
-    <mat-icon>menu</mat-icon>
-</button>
-<mat-menu #menu="matMenu">
-    <a mat-menu-item> About Me</a>
-    <a mat-menu-item> Tech Stack</a>
-    <a mat-menu-item> Projects & Open-Source-Contributions</a>
-    <a mat-menu-item>Coding Profiles</a>
-    <a mat-menu-item>Certifications</a>
-    <a mat-menu-item>Awards & Recognitions</a>
-    <a mat-menu-item> Contact</a>
-</mat-menu>
 </mat-toolbar>
-<router-outlet></router-outlet>
