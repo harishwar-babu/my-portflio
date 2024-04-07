@@ -1,0 +1,25 @@
+.card{
+    flex: 1;
+    margin: 0 5px;
+}
+.image-container {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.oval-image {
+    width: 100%;
+    height: auto;
+}
+.alignment{
+    margin-top: 2%;
+}
+.social-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.social-link:hover {
+    color: lightblue;
+}
